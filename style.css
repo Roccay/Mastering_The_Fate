@@ -1,0 +1,224 @@
+body {
+  background-color: rgb(177, 99, 63);
+  height: 100vh;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  height: 100vh;
+  grid-auto-rows: minmax(100px, auto);
+}
+aside {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  border-color: rgb(110, 63, 41);
+  border-style: solid;
+  border-radius: 20px;
+  grid-column: 1;
+  grid-row: 1/6;
+  background-color: rgb(29, 29, 31);
+}
+.aside2 {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  grid-column: 6;
+  grid-row: 1/6;
+  color: white;
+  border-color: rgb(110, 63, 41);
+  border-style: solid;
+  border-radius: 20px;
+
+  background-color: rgb(29, 29, 31);
+}
+main {
+  margin: 5px;
+  border-color: rgb(110, 63, 41);
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 20px;
+  grid-column: 2/6;
+  grid-row: 1/6;
+  background-image: url("img/background.png");
+}
+.top {
+  height: 50%;
+}
+.top img {
+  animation: MoveUpDown 2s ease-in-out infinite;
+  position: relative;
+  float: right;
+  height: 150%;
+  margin: -20px 0 0 0;
+}
+
+#turn {
+  font-size: 30px;
+  font-family: "Blaka", cursive;
+  text-align: center;
+  margin: 0 0 0 250px;
+  padding: 0 5px;
+}
+#dice {
+  color: red;
+  font-family: "Blaka", cursive;
+  border-radius: 15px;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  font-size: 40px;
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+  background-color: rgb(37, 35, 32);
+}
+.mid {
+  height: 50%;
+}
+.mid img {
+  height: 100%;
+  margin: 0 30px 30px 0;
+}
+.bot {
+  grid-column: 1/7;
+  grid-row: 6/9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(177, 99, 63);
+  order: 3;
+  text-overflow: ellipsis;
+}
+.botLeft,
+.botRight1,
+.botRight2 {
+  border-radius: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+}
+
+#question {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  color: grey;
+}
+
+.botLeft {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: rgb(29, 29, 31);
+  font-family: "Kdam Thmor Pro", sans-serif;
+
+  border-color: rgb(110, 63, 41);
+  border-style: solid;
+  width: 65%;
+  text-overflow: ellipsis;
+}
+.botRight1,
+.botRight2 {
+  display: block;
+  width: 17%;
+  margin: 5px;
+}
+.wrapper button {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 30px;
+  border-color: rgb(110, 63, 41);
+  border-style: solid;
+  color: white;
+  margin: 5px;
+  border-width: 4px;
+  height: 100%;
+  border-radius: 15px;
+  width: 100%;
+  background-color: rgb(29, 29, 31);
+}
+#enemyName,
+#playerName {
+  font-family: "Blaka", cursive;
+  font-size: 50px;
+}
+
+span {
+  color: rgb(255, 230, 0);
+}
+strong {
+  color: red;
+}
+em {
+  color: rgb(197, 7, 255);
+  animation: jump 2s ease-in-out infinite;
+}
+@keyframes jump {
+  33% {
+    text-shadow: 0 -5px #6700a3;
+  }
+  66% {
+    text-shadow: 0 5px #6700a3;
+  }
+}
+.botLeft p {
+  font-size: 20px;
+  margin: 15px;
+  font-family: "Raleway", sans-serif;
+}
+.botLeft p:last-child {
+  padding: 0 0 100px 0;
+  font-family: "Raleway", sans-serif;
+  animation: mymove 2s;
+}
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 20px;
+  }
+}
+main #eStatus {
+  float: right;
+  margin: 40px 230px 0 0;
+}
+#eHP,
+#pHP {
+  font-weight: bolder;
+  margin: -5px;
+  font-size: 50px;
+  color: white;
+}
+
+#strength,
+#healing {
+  height: 45%;
+}
+
+.botRight1 img,
+.botRight2 img {
+  width: 100%;
+  margin: 0 0 -40px 0;
+}
+
+.init {
+  color: grey;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+p.init {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 30px;
+  color: black;
+  margin: 400px 0 0 0;
+}
+.inactive {
+  display: none;
+}

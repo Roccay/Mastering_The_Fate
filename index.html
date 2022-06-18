@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Mastering the Fate</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Blaka&family=Kdam+Thmor+Pro&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <p class="init">Type Your Name Here</p>
+    <input class="init" value="Player" />
+    <button class="init" id="initBut">submit</button>
+    <div class="wrapper inactive">
+      <aside>
+        <p id="playerName">Player</p>
+        <p><span>HP</span></p>
+        <p id="pHP">100/100</p>
+        <p id="pATK">ATK 8</p>
+        <p id="pDEF">DEF 5</p>
+      </aside>
+      <main>
+        <div class="top">
+          <div id="eStatus"><img id="eIcon" src="img/ATKicon.png" /></div>
+          <p id="turn">Your Turn</p>
+          <div id="dice">20</div>
+
+          <img src="img/enemy.png" />
+        </div>
+        <div class="mid">
+          <img src="img/player.png" />
+        </div>
+      </main>
+      <div class="aside2">
+        <p id="enemyName">Red Ghost King</p>
+        <p><span>HP</span></p>
+        <p id="eHP">100/100</p>
+        <p id="eATK"><span>ATK</span> 12</p>
+        <p id="eDEF"><span>DEF</span> 5</p>
+      </div>
+      <div class="bot">
+        <div class="botLeft" id="dialogueBox">
+          <p id="question">What are you going to do...?</p>
+        </div>
+        <div class="botRight1">
+          <button id="attack">
+            <img id="attackPic" src="img/attack.png" /> ATTACK
+          </button>
+        </div>
+        <div class="botRight2">
+          <button id="defend">
+            <img id="defendPic" src="img/defend.png" /> DEFEND
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
